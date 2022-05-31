@@ -12,12 +12,12 @@ public class Rho_pollard_blaise {
 	public static int factor(int n, int x0) {
 		int x = f(x0);
 		int y = f(x);
-		int d = Euclide.pgcd(x-y, n);
+		int d = Euclide.gcd(x-y, n);
 		while(d == 1) {
 			x = f(x);
 			y = f(x);
-			d = Euclide.pgcd(x-y, n);
-		}	// La fonction f utilisée n'a pas permi de retrouver le facteur.
+			d = Euclide.gcd(x-y, n);
+		}	// La fonction f utilisï¿½e n'a pas permi de retrouver le facteur.
 		if(d == n)
 			return -1;
 		else

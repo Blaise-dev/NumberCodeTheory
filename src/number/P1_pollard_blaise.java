@@ -13,7 +13,7 @@ public class P1_pollard_blaise {
 		int a = 2;
 		for(int j = 2 ; j <= B ; j++) {
 			a = (int) Math.pow(a,j);
-			int d = Euclide.pgcd(a-1, n);
+			int d = Euclide.gcd(a-1, n);
 			if(d > 1 && d < n)
 				return d;
 		}
